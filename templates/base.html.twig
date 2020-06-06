@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}{% endblock %}</title>
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('build/app.css') }}">
+            <link href="{{ asset('build/bootstrap/bootstrap.css') }}" rel="stylesheet">
+        {% endblock %}
+    </head>
+
+    <body>
+        <header class="row">
+            <div class="col-lg-12">
+                Menu
+            </div>
+        </header>
+        {% block container %}{% endblock %}
+        <footer class="row">
+            <p class="col-lg-12"> Site réalisé dans le cadre d'une formation OpenClassrooms</br>par Alexandra Gomez.</p>
+        </footer>
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

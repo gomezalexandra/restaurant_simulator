@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} dashboard {% endblock %}
+
+{% block container %}
+
+    <div class="row">
+        <p class="offset-lg-1 col-lg-11">
+            Test dashboard.
+        </p>
+    </div>
+
+    <div class="row">
+        <p class="offset-lg-1 col-lg-11">
+            {% for user in users %}
+                votre id : {{user.id}} </br>
+                votre pseudo : {{user.pseudo}} </br>
+                votre role : {{user.role}}
+            {% endfor %}
+        </p>
+
+    </div>
+
+{% endblock %}
