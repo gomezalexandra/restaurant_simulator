@@ -5,9 +5,13 @@
 {% block container %}
 
     <div class="row">
-        <p class="offset-lg-1 col-lg-11">
-            Test dashboard.
-        </p>
+        <h1 class="offset-lg-1 col-lg-11">
+            Bienvenue sur Votre Tableau de Bord {{ userLogged.pseudo }} !
+        </h1>
+    </div>
+
+    <div class="row">
+        <a class="offset-lg-1 col-lg-2" href="{{ path('app_homepage') }}"> Se déconnecter </a>
     </div>
 
     <div class="row">
@@ -18,7 +22,9 @@
                 votre role : {{user.role}}
             {% endfor %}
         </p>
-
     </div>
 
+    <p> <a href="{{ path('app_dashboard', {route: 'new_simulation'}) }}">Nouvelle simulation</a> </p>
+    <p> <a href="{{ path('app_dashboard', {route: 'simulation_draft'}) }}">Voir les brouillons</a> </p>
+    <p> <a href="{{ path('app_dashboard', {route: 'simulation_saved'}) }}">Voir les simulations</a> </p>
 {% endblock %}

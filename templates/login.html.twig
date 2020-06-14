@@ -13,7 +13,7 @@
     </p>
 
     <div class="formContainer">
-        <form method="post" action="/dashboard">
+        <form method="post" action="{{ path('app_dashboard', {route: 'dashboard'}) }}">
             <label for="pseudo">Pseudo</label><br>
             <input type="text" id="pseudo" name="pseudo"><br>
             <label for="password">Mot de passe</label><br>

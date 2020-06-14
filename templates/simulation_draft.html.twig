@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} brouillons {% endblock %}
+
+{% block container %}
+
+    <div class="row">
+        <h1 class="offset-lg-1 col-lg-11">
+           Les brouillons
+        </h1>
+    </div>
+
+    <p> <a href="{{ path('app_dashboard', {route: 'dashboard'}) }}">Retour au tableau de bord</a> </p>
+{% endblock %}

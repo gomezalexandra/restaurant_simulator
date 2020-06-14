@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} nouvelle simulation {% endblock %}
+
+{% block container %}
+
+    <div class="row">
+        <h1 class="offset-lg-1 col-lg-11">
+            Nouvelle simulation
+        </h1>
+    </div>
+
+    <p> <a href="{{ path('app_dashboard', {route: 'dashboard'}) }}">Retour au tableau de bord</a> </p>
+
+    <div class="formContainer">
+        <form method="post" action="{{ path('app_dashboard', {route: 'new_simulation'}) }}">
+            <label for="first_need">Frais de démarrage :</label></br>
+            <input type="text" id="first_need" name="first_need"></br>
+
+            <label for="first_income">Financement de démarrage :</label></br>
+            <input type="text" id="first_income" name="first_income"></br>
+
+            <label for="fixed_charges">Charges fixes :</label></br>
+            <input type="text" id="fixed_charges" name="fixed_charges"></br>
+
+            <label for="variable_expenses">Charges variables :</label></br>
+            <input type="text" id="variable_expenses" name="variable_expenses"></br>
+
+            <label for="income">Chiffre d'affaire (12 mois) :</label></br>
+            <input type="text" id="income" name="income"></br>
+
+            <input type="submit" value="Valider" id="submit" name="submit">
+        </form>
+    </div>
+{% endblock %}

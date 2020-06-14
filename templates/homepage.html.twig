@@ -5,27 +5,45 @@
 {% block container %}
 
     <div class="row">
-        <img class="offset-lg-1 col-lg-2" src="{{ asset('build/images/bleu_orange.jpg') }}" width="300">
-        <img class="offset-lg-1 col-lg-2" src="{{ asset('build/images/orange.jpg') }}" width="300">
+        {#<img class="offset-lg-1 col-lg-2" src="{{ asset('build/images/bleu_orange.jpg') }}" width="300">
+        <img class="offset-lg-1 col-lg-2" src="{{ asset('build/images/orange.jpg') }}" width="300">#}
     </div>
 
-    <div class="row">
-        <h1 class="offset-lg-1 col-lg-11" > Homepage </h1>
+    <div class="row title">
+        <h1 class="col-sm-12" > LEXA </h1>
     </div>
 
-    <div class="row">
-        <a class="offset-lg-1 col-lg-2" href="{{ path('app_register') }}"> Register </a>
-        <a class="col-lg-2" href="{{ path('app_login') }}"> Login </a>
+    <div class="row d-flex justify-content-center homepageButton">
+            <a class="col-sm-2 center" href="{{ path('app_register') }}"> Register </a>
+            <a class="col-sm-2 center" href="{{ path('app_login') }}"> Login </a>
+
+        {#<a class="col-lg-2" href="{{ path('app_test') }}"> Page Test </a>#}
     </div>
 
-    <div class="row">
-        <p class="offset-lg-1 col-lg-10">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec justo augue. Duis laoreet felis ac magna posuere, eu aliquam augue volutpat. Donec id enim metus. Morbi placerat sapien sem, ut semper arcu lobortis ut. Vestibulum ante erat, fermentum sit amet tempus quis, tempor at dolor. Vestibulum dui mauris, consequat eu mi sit amet, maximus interdum velit. Sed pharetra erat a placerat tempus. Cras tincidunt turpis eu erat tincidunt, sit amet tristique est lobortis. Proin et neque dictum, lacinia felis ut, venenatis sapien. Mauris id dignissim ante, eu tincidunt neque.
+    <div class="row d-flex justify-content-center">
+        <p class="col-sm-8 homepageText">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec justo augue. Duis laoreet felis ac magna posuere, eu aliquam augue volutpat. Donec id enim metus. Morbi placerat sapien sem, ut semper arcu lobortis ut.
         </p>
     </div>
 
-    <div class="row">
-        <p class="offset-lg-1 col-lg-10">Diaporama</p>
+    <div class="row  d-flex justify-content-center flower">
+        <img class="col-sm-11" src="{{ asset('build/images/flower.jpg') }}">
     </div>
+
+    <div class="row d-flex justify-content-center">
+        <div class="homepageBlock d-flex align-items-center justify-content-center col-sm-3">En savoir plus</div>
+        <div class="blockStyle1 d-flex align-items-center justify-content-center col-sm-3"></div>
+    </div>
+
+    <div class="row d-flex justify-content-center">
+        <div class="blockStyle2 d-flex align-items-center justify-content-center col-sm-3"></div>
+        <div class="homepageBlock d-flex align-items-center justify-content-center col-sm-3">Commencer</div>
+    </div>
+
+    <div class="row d-flex justify-content-center">
+        <div class="homepageBlock d-flex align-items-center justify-content-center col-sm-3">Nous contacter</div>
+        <div class="blockStyle3 d-flex align-items-center justify-content-center col-sm-3"></div>
+    </div>
+
 
 {% endblock %}

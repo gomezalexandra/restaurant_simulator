@@ -4,13 +4,12 @@
 namespace App\Controller;
 
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
-class BackController extends AbstractController
+class BackController extends Controller
 {
     /**
-     * @Route("/test")
+     * @Route("/test",  name="app_test")
      */
     public function test()
     {
