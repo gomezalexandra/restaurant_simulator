@@ -10,5 +10,11 @@
         </h1>
     </div>
 
+    {% for simulation in simulations %}
+       simulation numéro: {{ simulation.id }}
+        {{ simulation.firstneed }}
+        {{ simulation.firstincome }} </br>
+    {% endfor %}
+
     <p> <a href="{{ path('app_dashboard', {route: 'dashboard'}) }}">Retour au tableau de bord</a> </p>
 {% endblock %}

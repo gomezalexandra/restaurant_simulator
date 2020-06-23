@@ -8,8 +8,16 @@
 
     <h2> <a  href="{{ path('app_homepage') }}"> Retour page principale </a> </h2>
 
-    <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec justo augue. Duis laoreet felis ac magna posuere, eu aliquam augue volutpat. Donec id enim metus. Morbi placerat sapien sem, ut semper arcu lobortis ut. Vestibulum ante erat, fermentum sit amet tempus quis, tempor at dolor. Vestibulum dui mauris, consequat eu mi sit amet, maximus interdum velit. Sed pharetra erat a placerat tempus. Cras tincidunt turpis eu erat tincidunt, sit amet tristique est lobortis. Proin et neque dictum, lacinia felis ut, venenatis sapien. Mauris id dignissim ante, eu tincidunt neque.
-    </p>
+    <div class="formContainer">
+        <form method="post" action="{{ path('app_dashboard') }}">
+            <label for="pseudo">Pseudo</label><br>
+            <input type="text" id="pseudo" name="pseudo"><br>
+            <label for="password">Mot de passe</label><br>
+            <input type="password" id="password" name="password"><br>
+            <input type="submit" value="Connexion" id="submit" name="submit">
+        </form>
+    </div>
+
+    <div> <a  href="{{ path('app_login') }}"> J'ai déjà un compte </a> </div>
 
 {% endblock %}

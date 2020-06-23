@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} nouvelle simulation {% endblock %}
+
+{% block container %}
+    {%  for simulation in simulations %}
+        <ul>
+            <li> {{ simulation.firstneed }}</li>
+            <li> {{ simulation.income }}</li>
+
+        </ul>
+    {%  endfor %}
+
+{% endblock %}

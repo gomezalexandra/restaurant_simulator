@@ -35,9 +35,45 @@ class FrontController extends Controller
     }
 
     /**
+     * @Route("/concept", name="app_concept")
+     */
+    public function concept()
+    {
+        return $this->render('concept.html.twig');
+    }
+
+    /**
+     * @Route("/contact", name="app_contact")
+     */
+    public function contact()
+    {
+        return $this->render('contact.html.twig');
+    }
+
+    /**
+     * @Route("/dashboard", name="app_dashboard")
+     */
+    public function dashboard(SessionInterface $session)
+    {
+      /*$users = $this->userDAO->getUsers();
+        if ($users) {
+            dump($users);
+            $session->set('id', $users[1]);
+            $userLogged = $session->get('id');
+            return $this->render('dashboard.html.twig', ['users'=>$users, 'userLogged'=>$userLogged]);
+        }
+        else {
+            return $this->render('homepage.html.twig');
+        }*/
+        return $this->render('dashboard.html.twig');
+    }
+
+    /*
+    /**
      * @Route("/{route}", name="app_dashboard")
      */
-    public function logged($route, SessionInterface $session)
+
+   /* public function logged($route, SessionInterface $session)
     {
         $users = $this->userDAO->getUsers();
         if ($route === 'dashboard') {
@@ -72,4 +108,6 @@ class FrontController extends Controller
         }
 
     }
-}
+    */
+
+   }

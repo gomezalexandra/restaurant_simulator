@@ -9,6 +9,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use App\DAO\FinancialDataDAO;
 
 
+
 class Controller extends AbstractController
 {
     protected $userDAO;
@@ -16,8 +17,8 @@ class Controller extends AbstractController
 
     public function __construct()
     {
-        $this->userDAO = new UserDAO();
+       // $this->userDAO = new UserDAO();
 
-        $this->financialDataDAO = new FinancialDataDAO();
+       // $this->financialDataDAO = new FinancialDataDAO();
     }
 }

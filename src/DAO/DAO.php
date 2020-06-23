@@ -22,7 +22,7 @@ class DAO
     public function getConnection()
     {
         try{
-            $this->connection = new PDO('mysql:host=localhost;dbname=resto_finance;charset=utf8', 'root', '' );
+            $this->connection = new PDO('mysql:host=localhost;dbname=resto_test;charset=utf8', 'root', '' );
             $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
             return $this->connection;

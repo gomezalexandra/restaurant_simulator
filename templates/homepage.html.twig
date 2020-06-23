@@ -9,13 +9,14 @@
         <img class="offset-lg-1 col-lg-2" src="{{ asset('build/images/orange.jpg') }}" width="300">#}
     </div>
 
+
     <div class="row title">
-        <h1 class="col-sm-12" > LEXA </h1>
+        <h1 class="col-sm-12" > TITRE </h1>
     </div>
 
     <div class="row d-flex justify-content-center homepageButton">
-            <a class="col-sm-2 center" href="{{ path('app_register') }}"> Register </a>
-            <a class="col-sm-2 center" href="{{ path('app_login') }}"> Login </a>
+            <a class="col-xs-2 center" href="{{ path('app_register') }}"> S'enregistrer </a>
+            <a class="col-xs-2 center" href="{{ path('app_login') }}"> Se connecter </a>
 
         {#<a class="col-lg-2" href="{{ path('app_test') }}"> Page Test </a>#}
     </div>
@@ -27,22 +28,22 @@
     </div>
 
     <div class="row  d-flex justify-content-center flower">
-        <img class="col-sm-11" src="{{ asset('build/images/flower.jpg') }}">
+        <img class="col-sm-8" src="{{ asset('build/images/flower.jpg') }}">
     </div>
 
     <div class="row d-flex justify-content-center">
-        <div class="homepageBlock d-flex align-items-center justify-content-center col-sm-3">En savoir plus</div>
-        <div class="blockStyle1 d-flex align-items-center justify-content-center col-sm-3"></div>
+        <h2 class="homepageBlock d-flex align-items-center justify-content-center col-sm-3"><a href="{{ path('app_concept') }}">En savoir plus</a></h2>
+        <div class="homepageBlock blockStyle1 d-flex align-items-center justify-content-center col-sm-3"></div>
     </div>
 
     <div class="row d-flex justify-content-center">
         <div class="blockStyle2 d-flex align-items-center justify-content-center col-sm-3"></div>
-        <div class="homepageBlock d-flex align-items-center justify-content-center col-sm-3">Commencer</div>
+        <h2 class="homepageBlock homepageBlock d-flex align-items-center justify-content-center col-sm-3"><a href="{{ path('app_login') }}">Commencer</a></h2>
     </div>
 
     <div class="row d-flex justify-content-center">
-        <div class="homepageBlock d-flex align-items-center justify-content-center col-sm-3">Nous contacter</div>
-        <div class="blockStyle3 d-flex align-items-center justify-content-center col-sm-3"></div>
+        <h2 class="homepageBlock d-flex align-items-center justify-content-center col-sm-3"><a href="{{ path('app_contact') }}">Nous contacter</a></h2>
+        <div class="homepageBlock blockStyle3 d-flex align-items-center justify-content-center col-sm-3"></div>
     </div>
 
 

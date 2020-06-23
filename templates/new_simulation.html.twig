@@ -4,32 +4,53 @@
 
 {% block container %}
 
-    <div class="row">
-        <h1 class="offset-lg-1 col-lg-11">
-            Nouvelle simulation
-        </h1>
+    <div class="row title">
+        <h1 class="col-lg-12"> Nouvelle simulation </h1>
     </div>
 
-    <p> <a href="{{ path('app_dashboard', {route: 'dashboard'}) }}">Retour au tableau de bord</a> </p>
+    <div class="row d-flex justify-content-center board">
+        <p class="col-sm-1 d-flex align-items-center justify-content-center simulationLineGreen"> 1 </p>
+        <p class="col-sm-1 d-flex align-items-center justify-content-center simulationLineGreen"> 2 </p>
+        <p class="col-sm-1 d-flex align-items-center justify-content-center simulationLineGreen"> 3 </p>
+        <p class="col-sm-1 d-flex align-items-center justify-content-center simulationLineOrange"> 4 </p>
+        <p class="col-sm-1 d-flex align-items-center justify-content-center simulationLineOrange"> 5 </p>
+        <p class="col-sm-1 d-flex align-items-center justify-content-center simulationLineOrange"> 6 </p>
+    </div>
 
-    <div class="formContainer">
-        <form method="post" action="{{ path('app_dashboard', {route: 'new_simulation'}) }}">
-            <label for="first_need">Frais de démarrage :</label></br>
-            <input type="text" id="first_need" name="first_need"></br>
+    <div class="row newsimulationButton">
+        <a class="col-sm-3" href="{{ path('app_dashboard') }}">Retour au tableau de bord</a>
+    </div>
 
-            <label for="first_income">Financement de démarrage :</label></br>
-            <input type="text" id="first_income" name="first_income"></br>
+    {{ form_start(simulationForm) }}
+        {{ form_widget(simulationForm) }}
+        <button type="submit" class="btn btn-primary">Create!</button>
+    {{ form_end(simulationForm) }}
 
-            <label for="fixed_charges">Charges fixes :</label></br>
-            <input type="text" id="fixed_charges" name="fixed_charges"></br>
+    {#<div class="row board">
+        <div class="col-sm-12 d-flex align-items-center justify-content-center formContainer">
+            <form method="post" action="{{ path('app_dashboard', {route: 'new_simulation'}) }}">
+                <label for="first_need">Frais de démarrage :</label></br>
+                <input type="text" id="first_need" name="first_need"></br>
 
-            <label for="variable_expenses">Charges variables :</label></br>
-            <input type="text" id="variable_expenses" name="variable_expenses"></br>
+                <label for="first_income">Financement de démarrage :</label></br>
+                <input type="text" id="first_income" name="first_income"></br>
 
-            <label for="income">Chiffre d'affaire (12 mois) :</label></br>
-            <input type="text" id="income" name="income"></br>
+                <label for="fixed_charges">Charges fixes :</label></br>
+                <input type="text" id="fixed_charges" name="fixed_charges"></br>
 
-            <input type="submit" value="Valider" id="submit" name="submit">
-        </form>
+                <label for="variable_expenses">Charges variables :</label></br>
+                <input type="text" id="variable_expenses" name="variable_expenses"></br>
+
+                <label for="income">Chiffre d'affaire (12 mois) :</label></br>
+                <input type="text" id="income" name="income"></br>
+
+                <input type="submit" value="Valider" id="submit" name="submit">
+            </form>
+        </div>
+    </div>#}
+
+    <div class="row d-flex justify-content-center newsimulationButton">
+        <a class="col-sm-2 center" href="{{ path('app_dashboard', {route: 'dashboard'}) }}"> Retour </a>
+        <a class="col-sm-2 center" href="{{ path('app_dashboard', {route: 'dashboard'}) }}"> Suivant </a>
     </div>
 {% endblock %}
