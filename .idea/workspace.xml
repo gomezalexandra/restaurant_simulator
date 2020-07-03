@@ -20,27 +20,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ce6a43c-7d1b-42e9-853d-6f863eaa985b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/resto_finance.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/resto_finance.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/twig.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/twig.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/BackController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/BackController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Controller.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/FrontController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/FrontController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DAO/DAO.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DAO/DAO.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Simulation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Simulation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/SimulationFormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/SimulationFormType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/UserRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/dashboard.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dashboard.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/homepage.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/homepage.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/login.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/new_simulation.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/new_simulation.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/pagetest.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pagetest.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/register.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/simulation_draft.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/simulation_draft.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/simulation_saved.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/simulation_saved.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +173,13 @@
       <workItem from="1592655227619" duration="2136000" />
       <workItem from="1592757864525" duration="4797000" />
       <workItem from="1592810982655" duration="14715000" />
-      <workItem from="1592907371776" duration="757000" />
+      <workItem from="1592907371776" duration="3635000" />
+      <workItem from="1593160668504" duration="403000" />
+      <workItem from="1593161300277" duration="9871000" />
+      <workItem from="1593358674839" duration="7836000" />
+      <workItem from="1593590643848" duration="602000" />
+      <workItem from="1593768017233" duration="951000" />
+      <workItem from="1593768984891" duration="4431000" />
     </task>
     <servers />
   </component>
@@ -209,13 +207,24 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1171" y="242" key="NewPhpClassDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1592820559376" />
-    <state x="667" y="119" width="585" height="801" key="find.popup" timestamp="1592907702151">
+    <state x="667" y="119" width="585" height="801" key="find.popup" timestamp="1593420178565">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="667" y="119" width="585" height="801" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1592907702151" />
-    <state x="1089" y="228" width="672" height="678" key="search.everywhere.popup" timestamp="1592577704639">
+    <state x="667" y="119" width="585" height="801" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1593420178565" />
+    <state x="1089" y="228" width="672" height="678" key="search.everywhere.popup" timestamp="1593419595465">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1089" y="228" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1592577704639" />
+    <state x="1089" y="228" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1593419595465" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/Entity/User.php</url>
+          <line>4</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

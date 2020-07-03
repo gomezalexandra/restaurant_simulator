@@ -8,6 +8,7 @@ use App\Entity\Simulation;
 use App\Form\SimulationFormType;
 use App\Repository\SimulationRepository;
 use Doctrine\ORM\EntityManagerInterface;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
@@ -117,12 +118,26 @@ Spicy **jalapeno bacon** ipsum dolor amet veniam shank in dolore. Ham hock nisi 
     }
 
     /**
-     * @Route("/simulationsaved", name="app_simulation_saved")
+     * @Route("/simulationsaved/{id}", name="app_simulation_saved)
      */
-    public function simulationSaved()
+    /*public function simulationSaved(EntityManagerInterface $em, Simulation $simulation, Request $request)
     {
-        return $this->render('simulation_saved.html.twig');
-    }
+        $form = $this->createForm(SimulationFormType::class, $simulation);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            $em->persist($simulation);
+            $em->flush();
+
+            $this->addFlash('success', 'Article Updated! Inaccuracies squashed!');
+            return $this->redirectToRoute('app_dashboard', [
+                'id' => $simulation->getId(),
+            ]);
+        }
+
+        return $this->render('simulation_saved.html.twig', [
+            'simulationForm' => $form->createView()
+        ]);
+    }*/
 
     /**
      * @Route("/profile", name="app_profile")

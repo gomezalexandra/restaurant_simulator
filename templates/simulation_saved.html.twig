@@ -11,4 +11,12 @@
     </div>
 
     <p> <a href="{{ path('app_dashboard', {route: 'dashboard'}) }}">Retour au tableau de bord</a> </p>
+
+    {{ form_start(simulationForm) }}
+        {{ form_row(simulationForm.income) }}
+    {{ form_widget(simulationForm) }}
+
+    <button type="submit" class="btn btn-primary">Create!</button>
+    {{ form_end(simulationForm) }}
+
 {% endblock %}

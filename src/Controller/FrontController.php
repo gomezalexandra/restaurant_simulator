@@ -4,9 +4,14 @@
 namespace App\Controller;
 
 
+use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Component\Routing\Annotation\Route;
+use App\Entity\User;
+use App\Form\UserRegistrationFormType;
+use App\Security\LoginFormAuthenticator;
 
 class FrontController extends Controller
 {
@@ -21,9 +26,29 @@ class FrontController extends Controller
     /**
      * @Route("/login", name="app_login")
      */
-    public function login()
+    public function login(Request $request, EntityManagerInterface $em)
     {
         return $this->render('login.html.twig');
+    }
+
+    /**
+     * @Route("/testlogin", name="app_test_login")
+     */
+    public function testlogin(Request $request, EntityManagerInterface $em)
+    {
+        $form = $this->createForm(UserRegistrationFormType::class);
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid()) {
+            /** @var User $user */
+            $user = $form->getData();
+
+            $em->persist($user);
+            $em->flush();
+        }
+
+        return $this->render('login.html.twig', [
+            'registrationForm' => $form->createView(),
+        ]);
     }
 
     /**

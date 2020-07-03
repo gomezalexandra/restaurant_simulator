@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\SimulationRepository;
+use App\Repository\UserRepository;
+use App\Entity\User;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
@@ -20,22 +22,25 @@ class Simulation
 
     /**
      * @ORM\Column(type="integer")
-     * @Assert\NotBlank(message="Get creative and think of a title!")
+     * @Assert\NotBlank(message="Test message validation")
      */
     private $first_need;
 
     /**
      * @ORM\Column(type="integer")
+     * * @Assert\NotBlank(message="Test message validation")
      */
     private $first_income;
 
     /**
      * @ORM\Column(type="integer")
+     * * @Assert\NotBlank(message="Test message validation")
      */
     private $fixed_charges;
 
     /**
      * @ORM\Column(type="integer")
+     * * @Assert\NotBlank(message="Test message validation")
      */
     private $variable_expenses;
 
@@ -46,6 +51,7 @@ class Simulation
 
     /**
      * @ORM\Column(type="integer")
+     * * @Assert\NotBlank(message="Test message validation")
      */
     private $userId;
 

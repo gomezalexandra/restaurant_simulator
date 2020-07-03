@@ -21,8 +21,16 @@
         <a class="col-sm-3" href="{{ path('app_dashboard') }}">Retour au tableau de bord</a>
     </div>
 
-    {{ form_start(simulationForm) }}
-        {{ form_widget(simulationForm) }}
+    {{ form_start(simulationForm, {
+        attr: {class: 'form-signin'}
+    }) }}
+    {#{{ form_widget(simulationForm) }} a utiliser pour plus de rapidité mais moins de control#}
+        {{ form_row(simulationForm.income, {
+            label: 'test pour changer le label'
+        }) }}
+        {{ form_row(simulationForm.first_need, {
+            attr: {placeholder: 'test placeholder'}
+        }) }}
         <button type="submit" class="btn btn-primary">Create!</button>
     {{ form_end(simulationForm) }}
 
