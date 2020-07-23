@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} charges {% endblock %}
+
+{% block container %}
+
+    {{ form_start(chargesForm) }}
+    <p>test avec zone de text dans le formulaire</p>
+
+    {{ form_widget(chargesForm) }}
+
+    <button type="submit" class="btn btn-primary">Create!</button>
+    {{ form_end(chargesForm) }}
+
+{% endblock %}

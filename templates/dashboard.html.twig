@@ -4,30 +4,56 @@
 
 {% block container %}
 
-    <div class="row title">
-        <h1 class="col-lg-12">
-            Tableau de Bord
-        </h1>
+    <div class="blockHead headLarge">
+        <div class="row title">
+            <h1 class="col-sm-12" > Tableau de bord </h1>
+        </div>
     </div>
 
-    <p class="board"> Bonjour user !</p>
+    <div class="backgroundDashboard">
 
-    <div class="row">
-        <a class="col-sm-12" href="{{ path('app_homepage') }}"> Se déconnecter </a>
-    </div>
-    <div class="row">
-        <p class="col-sm-12"> Dernière connexion: le 10/06/2020 à 10h </p>
+        <div class="row blockDashboard">
+
+            <div class="col-sm-12">
+
+                <div class="row">
+                    <h2 class="col-sm-12 d-flex align-items-center justify-content-center subtitle"> Bienvenue Lorem Ipsum !</h2>
+                </div>
+
+                <div class="row blockContainer d-flex justify-content-center">
+                    <div class="choiceBlock blockStyle1 d-flex align-items-center justify-content-center col-xs-6"><a href="{{ path('app_new_simulation_bis') }}"">Nouvelle simulation</a></div>
+                    <div class="choiceBlock blockStyle2 d-flex align-items-center justify-content-center col-xs-6"><a href="{{ path('app_test') }}">Mes simulations</a></div>
+                </div>
+
+                <div class="row d-flex justify-content-center">
+                    <div class="choiceBlock blockStyle2 d-flex align-items-center justify-content-center col-xs-6"><a href="{{ path('app_simulation_draft') }}">Mes brouillons</a></div>
+                    <div class="choiceBlock blockStyle2 d-flex align-items-center justify-content-center col-xs-6"><a href="{{ path('app_profile') }}">Mon profil</a></div>
+                </div>
+
+            </div>
+
+        </div>
+
     </div>
 
-    {#<div class="row">
-        <p class="offset-lg-1 col-lg-11">
-            {% for user in users %}
-                votre id : {{user.id}} </br>
-                votre pseudo : {{user.pseudo}} </br>
-                votre role : {{user.role}}
-            {% endfor %}
-        </p>
-    </div>#}
+    {#  <p class="board"> Bonjour user !</p>
+
+      <div class="row">
+          <a class="col-sm-12" href="{{ path('app_homepage') }}"> Se déconnecter </a>
+      </div>
+      <div class="row">
+          <p class="col-sm-12"> Dernière connexion: le 10/06/2020 à 10h </p>
+      </div>
+
+      <div class="row">
+          <p class="offset-lg-1 col-lg-11">
+              {% for user in users %}
+                  votre id : {{user.id}} </br>
+                  votre pseudo : {{user.pseudo}} </br>
+                  votre role : {{user.role}}
+              {% endfor %}
+          </p>
+      </div>
 
     <div class="board">
         <div class="row d-flex justify-content-center">
@@ -35,7 +61,7 @@
         </div>
 
         <div class="row d-flex justify-content-center">
-           {#<h2 class="dashboardBlock blockStyle2 d-flex align-items-center justify-content-center col-sm-4"><a href="{{ path('app_simulation_saved') }}">Les simulations</a></h2>#}
+           <h2 class="dashboardBlock blockStyle2 d-flex align-items-center justify-content-center col-sm-4"><a href="{{ path('app_simulation_saved') }}">Les simulations</a></h2>
             <h2 class="dashboardBlock blockStyle2 d-flex align-items-center justify-content-center col-sm-4">Les simulations</h2>
             <img class="dashboardBlock col-sm-4 dashboardFlower" src="{{ asset('build/images/flower.jpg') }}">
         </div>
@@ -43,7 +69,7 @@
             <h2 class="dashboardBlock blockStyle3 d-flex align-items-center justify-content-center col-sm-4"><a href="{{ path('app_simulation_draft') }}">Les brouillons</a></h2>
             <h2 class="dashboardBlock blockStyle4 d-flex align-items-center justify-content-center col-sm-4"><a href="{{ path('app_profile') }}">Mon profil</a></h2>
         </div>
-    </div>
+    </div>#}
 
     {#<p> <a href="{{ path('app_dashboard', {route: 'new_simulation'}) }}">Nouvelle simulation</a> </p>
     <p> <a href="{{ path('app_dashboard', {route: 'simulation_draft'}) }}">Voir les brouillons</a> </p>

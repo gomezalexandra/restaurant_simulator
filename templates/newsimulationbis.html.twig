@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} nouvelle simulation test {% endblock %}
+
+{% block container %}
+
+    {{ form_start(simulationbisForm) }}
+
+    {{ form_widget(simulationbisForm) }}
+
+    <button type="submit" class="btn btn-primary">Create!</button>
+    {{ form_end(simulationbisForm) }}
+
+    <canvas id="myChart" width="400" height="100"></canvas>
+    <canvas id="myDoughnutChart" width="400" height="100"></canvas>
+
+{% endblock %}

@@ -1,8 +1,24 @@
 {% extends 'base.html.twig' %}
+{% form_theme simulationForm _self %}
 
 {% block title %} nouvelle simulation {% endblock %}
 
+{% block form_row %}
+
+    {%- set widget_attr = {} -%}
+    {%- if help is not empty -%}
+        {%- set widget_attr = {attr: {'aria-describedby': id ~"_help"}} -%}
+    {%- endif -%}
+    {{- form_label(form) -}}
+    {{- form_errors(form) -}}
+    {{- form_widget(form, widget_attr) -}}
+    {{- form_help(form) -}}
+
+{% endblock %}
+
+
 {% block container %}
+
 
     <div class="row title">
         <h1 class="col-lg-12"> Nouvelle simulation </h1>
@@ -24,6 +40,8 @@
     {{ form_start(simulationForm, {
         attr: {class: 'form-signin'}
     }) }}
+        <p>test avec zone de text dans le formulaire</p>
+
     {#{{ form_widget(simulationForm) }} a utiliser pour plus de rapidité mais moins de control#}
         {{ form_row(simulationForm.income, {
             label: 'test pour changer le label'

@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} all verification {% endblock %}
+
+{% block container %}
+
+  {% set charges = app.session.get('charges') %}
+  {% set incomes = app.session.get('incomes') %}
+
+  {#{{ dump(app.session.get('incomes')) }}#}
+
+  Votre CA : {{ incomes.ca }} </br>
+  Vos besoin de démarrage : {{ incomes.firstNeeds }} </br>
+  Vos charges variables : {{ charges.variableCharge }} </br>
+  Vos charges fixes : {{ charges.fixedcharge }} </br>
+
+  <a class="col-xs-2 center" href="{{ path('app_flush') }}">Valider les données!</a> </br>
+  <a class="col-xs-2 center" href="{{ path('app_new_simulation_bis') }}">Modifier!</a>
+{% endblock %}
